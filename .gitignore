@@ -1,0 +1,21 @@
+# Dependencias
+node_modules/
+
+# Archivos de registro
+logs/
+*.log
+
+# Archivos generados automáticamente
+dist/
+build/
+
+# Archivos de entorno
+.env
+.env.local
+.env.*.local
+.env.test
+.env.production
+
+# Otros archivos
+.DS_Store
+Thumbs.db
