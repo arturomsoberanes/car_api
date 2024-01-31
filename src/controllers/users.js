@@ -36,11 +36,12 @@ const loginUser = async (req, res) => {
 
 const registerUser = async (req, res) => {
   try {
-    const { name, username, password } = req.body.data
+    const { name, username, password, role } = req.body.data
     const user = new User({
       name,
       username,
-      password: bcrypt.hashSync(password, 10)
+      password: bcrypt.hashSync(password, 10),
+      role
     })
     const newUser = await user.save()
     res.json(newUser)
